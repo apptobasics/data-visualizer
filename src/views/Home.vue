@@ -1,5 +1,13 @@
 <template>
   <div class="page">
-    Home
+    <DataTable />
   </div>
 </template>
+<script>
+import DataTable from '@/components/DataTable'
+export default {
+  components: {
+    DataTable
+  }
+}
+</script>
