@@ -1,12 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer 
-      app 
-      :mini-variant="navDrawer"
-    >
-      Nav
-    </v-navigation-drawer>
-
+    <NavDrawer />
     <v-app-bar app>
       <v-btn icon>
         <v-icon @click="toggleDrawer">
@@ -30,7 +24,12 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
+import NavDrawer from '@/components/NavDrawer'
 export default {
+  components: {
+    NavDrawer
+  },
+
   computed: {
     ...mapState(['navDrawer'])
   },
