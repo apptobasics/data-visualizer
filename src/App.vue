@@ -17,7 +17,7 @@
     </v-content>
 
     <v-footer app>
-      Footer
+      <MainFooter />
     </v-footer>
   </v-app>
 </template>
@@ -25,9 +25,11 @@
 <script>
 import { mapState, mapMutations } from 'vuex'
 import NavDrawer from '@/components/NavDrawer'
+import MainFooter from '@/components/Footer'
 export default {
   components: {
-    NavDrawer
+    NavDrawer,
+    MainFooter
   },
 
   computed: {

@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     navDrawer: false,
-    jsonData: []
+    jsonData: [],
+    headerCols: []
   },
   mutations: {
     TOGGLE_DRAWER (state) {

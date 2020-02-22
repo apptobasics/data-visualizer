@@ -20,6 +20,15 @@
           </v-btn>
         </v-form>
       </div>
+      <div class="col-selector">
+        <h3>Select Columns</h3>
+        <v-select
+          :items="jsonCols"
+          multiple
+          v-model="columns"
+          @change="handleColumnSelection"
+        />
+      </div>
     </div>
   </v-navigation-drawer>
 </template>
@@ -47,11 +56,20 @@ export default {
         return Array.isArray(_json) ? true : 'Not an Array'
       }
     ],
-    jsonValid: false
+    jsonValid: false,
+    columns: []
   }),
 
   computed: {
-    ...mapState(['navDrawer'])
+    ...mapState(['navDrawer', 'jsonData']),
+
+    jsonCols () {
+      let sampleObj = {}
+      if (this.jsonData.length > 0) {
+        sampleObj = this.jsonData[0]
+      }
+      return Object.keys(sampleObj)
+    }
   },
 
   methods: {
@@ -68,6 +86,10 @@ export default {
         this.jsonError = true
       }
       this.updateJson(_json)
+    },
+
+    handleColumnSelection (e) {
+      console.log(e)
     }
   }
 }

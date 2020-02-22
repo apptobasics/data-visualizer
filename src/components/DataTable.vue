@@ -1,6 +1,6 @@
 <template>
   <v-data-table
-    :headers="headers"
+    :headers="headerCols"
     :items="jsonData"
     :items-per-page="5"
     dense
@@ -11,7 +11,7 @@
 import { mapState } from 'vuex'
 export default {
   computed: {
-    ...mapState(['jsonData']),
+    ...mapState(['jsonData', 'headerCols']),
     headers () {
       let headers = []
       if (this.jsonData && this.jsonData[0]) {
