@@ -1,2 +1,2 @@
 (window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["settings"],{"26d3":function(t,e,n){"use strict";n.r(e);var s=function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"page"},[t._v(" Settings ")])},a=[],i=n("2877"),l={},c=Object(i["a"])(l,s,a,!1,null,null,null);e["default"]=c.exports}}]);
-//# sourceMappingURL=settings.69d5e20f.js.map
+//# sourceMappingURL=settings.9a5571b3.js.map
